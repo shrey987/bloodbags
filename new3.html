@@ -1,0 +1,119 @@
+<html>
+<head>
+  <title>NEW3</title>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+body {
+  background-image: url('https://cdn1.vectorstock.com/i/1000x1000/34/25/seamless-background-with-blood-donation-icons-vector-8523425.jpg');
+
+}
+</style>
+<style>
+   .card{
+    margin-top: 100px;
+
+  margin-right: 150px;
+  margin-left: 120px;
+}
+</style>
+</head>
+<body>
+  <div class="card  bg-light  border-dark mb-3" style="width: 20rem;">
+
+    <div class="card-body">
+      <h5 class="card-header">DATA</h5><br>
+      <form>
+
+      <p> <label> BLOOD BANK </label> <input type="text" id="name" required></p>
+          <label>USER ID </label>  <input type="text" id="USERID" required> <br>
+          <label>O+ </label>  <input type="text" id="o+" required> <br>
+          <label>B+ </label><input type="text" id="b+" required><br>
+          <label>AB+</label><input type="text" id="ab+" required><br>
+          <label>O- </label><input type="text" id="o-" required><br>
+          <label>B- </label>  <input type="text" id="b-" required><br>
+          <label>AB-</label><input type="text" id="ab-" required> <br>
+          <label>A- </label> <input type="text" id="a-" required><br>
+          <label>A+ </label>  <input type="text" id="a+" required> <br>
+            <button type="button" class="btn btn-primary" id="submit" onclick="submitclick()">ADD</button>
+    <button type="button" class="btn btn-primary" id="update">update</button>
+      </form>
+  </div>
+  </div>
+
+<p id="oo">
+
+</p>
+
+ <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+
+
+ <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+ <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+
+ <script>
+
+   var firebaseConfig = {
+     apiKey: "AIzaSyBkMKx8KlTf0PZ5QBa8aK6XGugZRl4pOz8",
+     authDomain: "bloodinfo-b2769.firebaseapp.com",
+     databaseURL: "https://bloodinfo-b2769.firebaseio.com",
+     projectId: "bloodinfo-b2769",
+     storageBucket: "bloodinfo-b2769.appspot.com",
+     messagingSenderId: "428703997938",
+     appId: "1:428703997938:web:842808c2f29c30066ed56b",
+     measurementId: "G-80Y8DBE7V3"
+   };
+
+   firebase.initializeApp(firebaseConfig);
+   firebase.analytics();
+    var userid= document.getElementById("USERID");
+    var opositive= document.getElementById("o+");
+    var onegative= document.getElementById("o-");
+    var bnegative= document.getElementById("b-");
+    var bpositive= document.getElementById("b+");                            var abnegative= document.getElementById("ab-");
+    var abpositive= document.getElementById("ab+");
+    var anegative= document.getElementById("a-");
+    var apositive= document.getElementById("a+");
+    var bankname= document.getElementById("name");
+   var msgg= document.getElementById("name");
+   var updatebtn= document.getElementById("update");
+       function submitclick() {
+               firebase.database().ref('/users/' + msgg.value).set({
+                Bank: bankname.value,
+                opositive: opositive.value,
+                onegative: onegative.value,
+                bpositive: bpositive.value,
+                bnegative:  bnegative.value,
+                abpositive: abpositive.value,
+                abnegative: abnegative.value,
+                apositive:  apositive.value,
+                anegative:  anegative.value
+
+          });
+
+}  var database=firebase.database();
+    updatebtn.addEventListener('click',hello);
+  function  hello(){
+      const newdata={
+        opositive: opositive.value,
+        onegative: onegative.value,
+        bpositive: bpositive.value,
+        bnegative:  bnegative.value,
+        abpositive: abpositive.value,
+        abnegative: abnegative.value,
+        apositive:  apositive.value,
+        anegative:  anegative.value,
+        Bank:    bankname.value,
+
+      }
+      const updates={};
+      updates['/users/'+ msgg.value]= newdata;
+     updates['/super-users/'+msgg.value]=newdata;
+     database.ref().update(updates);
+    }
+
+</script>
+</body>
+</html>
