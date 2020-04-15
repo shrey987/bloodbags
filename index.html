@@ -151,7 +151,7 @@
         firebase.database().ref('/users/').once('value',function(snapshot){
         snapshot.forEach(function(childsnapshot){
             var childkey = childsnapshot.key;console.log(childkey);
-            var childData= snapshot.child("ew").val();
+            var childData= snapshot.child("shrey").val();
           console.log(childData);
           document.getElementById("abpos1").innerHTML= childData['abpositive'];
           document.getElementById("abneg1").innerHTML = childData['abnegative'];
@@ -163,7 +163,7 @@
           document.getElementById("bneg1").innerHTML= childData['bnegative'];
           document.getElementById("name1").innerHTML= childData['Bank'];
 
-          var childData1= snapshot.child("shrey").val();
+          var childData1= snapshot.child("ew").val();
         console.log(childData1);
         document.getElementById("abpos2").innerHTML= childData1['abpositive'];
         document.getElementById("abneg2").innerHTML = childData1['abnegative'];
