@@ -1,0 +1,270 @@
+﻿<html>
+<head>
+<title>front page</title>
+<link rel="apple-touch-icon" sizes="128x128" href="blood-donation (128x128).png">
+<link rel="icon" type="image/png" sizes="32x32" href="blood-donation (32x32).png">
+<link rel="icon" type="image/png" sizes="16x16" href="blood-donation (16x16).png">
+<link rel="shortcut icon" href="blood-donation (24x24).png">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+<style media="screen">
+  #copy{
+    background-color: #CD3624;
+    height:130px;
+  }
+</style>
+<style>
+   .card{
+
+    margin-top: 100px;
+    border-radius: 0px;
+    margin-right: 150px;
+     margin-left: 70px;
+}
+   .card-body{
+     background-color: white;
+     background-repeat: no-repeat;
+     background-position: center;
+     background-size: cover;
+   }
+   #icons{
+     margin-left: 570px;
+     margin-right: 60px;
+     padding-top: 30px;
+   }
+   #right{
+     padding-top: 5px;
+   }
+   #github{
+     margin-left: 39px;
+   }
+</style>
+<style>
+   .pagination{
+    margin-top: 7px;
+    margin-right: 15px;
+     margin-left: 1150px;
+}
+  body{
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #AED6F1;
+  }
+ #nav{
+   color:#E13B2A;
+ }
+ /*#card1{
+   border-radius: 0px;
+   border-top-width: thin;
+   z-index :1;
+ }*/
+ #containerrow{
+   display:flex;
+   flex-wrap: wrap;
+ }
+ .testimonials {
+display: flex;
+flex-wrap:wrap ;
+justify-content: space-between;
+position: relative;
+top:  40px;
+margin-bottom: 100px;
+
+}
+.tbox {
+   width: 80%;
+   margin-left: 50px;
+   margin-right: 50px;
+   padding: 50px;
+   border:1px solid white ;
+   box-sizing: border-box;
+   margin-top: 50px;
+}
+</style>
+<link rel="manifest" href="/manifest.json" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-danger" role="navigation" id="nav">
+     <a class="navbar-brand" ><em>BLOOD</em></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div  class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="nav-item">
+          <a class="nav-link" href="new2.html"><font color="white">  HOSPITAL REGISRATION</a></font></li>
+
+      </ul>
+    </div>
+  </nav>
+<section>
+<div class="container">
+<div class="row" id="containerrow">
+<div class="col-md-4 col-sm-6">
+<div class="card  bg-light  border-dark mb-3" id="card" style="width: 18rem;">
+
+  <div class="card-body">
+
+    <h5 class="card-header"><span id="name1"></span></h5><br>
+      <h4><div>O+  :- <span id="opos1"></span>   </div></h4>
+      <h4><div>O-  :- <span id="oneg1"></span>   </div></h4>
+      <h4><div>B-  :- <span id="bneg1"></span>   </div></h4>
+      <h4><div>B+  :- <span id="bpos1"></span>   </div></h4>
+      <h4><div>A-  :- <span id="aneg1"></span>   </div></h4>
+      <h4><div>A+  :- <span id="apos1"></span>   </div></h4>
+      <h4><div>AB-  :- <span id="abneg1"></span>   </div></h4>
+      <h4><div>AB+  :- <span id="abpos1"></span>   </div></h4>
+</div>
+</div>
+</div>
+
+<div class="col-md-4 col-sm-6">
+<div class="card  bg-light  border-dark mb-3" id="hey2" style="width: 18rem;">
+
+  <div class="card-body">
+    <h5 class="card-header"><span id="name2"></span></h5><br>
+      <h4><div>O+  :- <span id="opos2"></span>   </div></h4>
+      <h4><div>O-  :- <span id="oneg2"></span>   </div></h4>
+      <h4><div>B-  :- <span id="bneg2"></span>   </div></h4>
+      <h4><div>B+  :- <span id="bpos2"></span>   </div></h4>
+      <h4><div>A-  :- <span id="aneg2"></span>   </div></h4>
+      <h4><div>A+  :- <span id="apos2"></span>   </div></h4>
+      <h4><div>AB-  :- <span id="abneg2"></span>   </div></h4>
+      <h4><div>AB+  :- <span id="abpos2"></span>   </div></h4>
+</div>
+
+</div>
+</div>
+
+<div class="col-md-4 col-sm-6">
+<div class="card  bg-light  border-dark mb-3" id="hey" style="width: 18rem;">
+
+  <div class="card-body">
+    <h5 class="card-header"><span id="name3"></span></h5><br>
+      <h4><div>O+  :- <span id="opos3"></span>   </div></h4>
+      <h4><div>O-  :- <span id="oneg3"></span>   </div></h4>
+      <h4><div>B-  :- <span id="bneg3"></span>   </div></h4>
+      <h4><div>B+  :- <span id="bpos3"></span>   </div></h4>
+      <h4><div>A-  :- <span id="aneg3"></span>   </div></h4>
+      <h4><div>A+  :- <span id="apos3"></span>   </div></h4>
+      <h4><div>AB-  :- <span id="abneg3"></span>   </div></h4>
+      <h4><div>AB+  :- <span id="abpos3"></span>   </div></h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="testimonials">
+    <div class="tbox">
+      <p>
+        “If you’re a blood donor, you’re a hero to someone, somewhere, who received your gracious gift of life.”<br>
+        “The donation of blood makes the difference between life and death.”
+      </p>
+    </div>
+
+<div class="tbox">
+    <p>“The donation of blood makes the difference between life and death.”<br>
+       “You don’t have to have a medical degree to save a life. Just a fair degree of humanity. Give Blood. Save Life.”
+    </p>
+</div>
+</div>
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+    <li class="page-item"><a class="page-link" href="#">1</a></li>
+    <li class="page-item"><a class="page-link" href="newsub.html">2</a></li>
+    <li class="page-item">
+      <a class="page-link" href="#" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+<section id="copy">
+   <div id="icons">
+        <a href="#"> <img id="github" rel="icon" type="image/png" sizes="32x32" src="github(2).png"></a>
+        <a href="#"> <img id="fb"     rel="icon" type="image/png" sizes="32x32" src="facebook.png"></a>
+        <a href="#"> <img id="insta"  rel="icon" type="image/png" sizes="32x32" src="instagram-sketched.png"></a>
+         <P id="right"> Copyright ©2020 Shrey Sitapara</p>
+       </div>
+</section>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-database.js"></script>
+
+<script>
+
+  var firebaseConfig = {
+    apiKey: "AIzaSyBkMKx8KlTf0PZ5QBa8aK6XGugZRl4pOz8",
+    authDomain: "bloodinfo-b2769.firebaseapp.com",
+    databaseURL: "https://bloodinfo-b2769.firebaseio.com",
+    projectId: "bloodinfo-b2769",
+    storageBucket: "bloodinfo-b2769.appspot.com",
+    messagingSenderId: "428703997938",
+    appId: "1:428703997938:web:842808c2f29c30066ed56b",
+    measurementId: "G-80Y8DBE7V3"
+  };
+
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+  getData();
+      function getData(){
+        firebase.database().ref('/users/').once('value',function(snapshot){
+        snapshot.forEach(function(childsnapshot){
+            var childkey = childsnapshot.key;console.log(childkey);
+            var childData= snapshot.child("ew").val();
+          console.log(childData);
+          document.getElementById("abpos1").innerHTML= childData['abpositive'];
+          document.getElementById("abneg1").innerHTML = childData['abnegative'];
+          document.getElementById("opos1").innerHTML= childData['opositive'];
+          document.getElementById("oneg1").innerHTML= childData['onegative'];
+          document.getElementById("apos1").innerHTML= childData['apositive'];
+          document.getElementById("bpos1").innerHTML= childData['bpositive'];
+          document.getElementById("aneg1").innerHTML= childData['anegative'];
+          document.getElementById("bneg1").innerHTML= childData['bnegative'];
+          document.getElementById("name1").innerHTML= childData['Bank'];
+
+          var childData1= snapshot.child("ahrwgw").val();
+        console.log(childData1);
+        document.getElementById("abpos2").innerHTML= childData1['abpositive'];
+        document.getElementById("abneg2").innerHTML = childData1['abnegative'];
+        document.getElementById("opos2").innerHTML= childData1['opositive'];
+        document.getElementById("oneg2").innerHTML= childData1['onegative'];
+        document.getElementById("apos2").innerHTML= childData1['apositive'];
+        document.getElementById("bpos2").innerHTML= childData1['bpositive'];
+        document.getElementById("aneg2").innerHTML= childData1['anegative'];
+        document.getElementById("bneg2").innerHTML= childData1['bnegative'];
+        document.getElementById("name2").innerHTML= childData1['Bank'];
+
+        var childData2= snapshot.child("shrey").val();
+      console.log(childData2);
+      document.getElementById("abpos3").innerHTML= childData2['abpositive'];
+      document.getElementById("abneg3").innerHTML = childData2['abnegative'];
+      document.getElementById("opos3").innerHTML= childData2['opositive'];
+      document.getElementById("oneg3").innerHTML= childData2['onegative'];
+      document.getElementById("apos3").innerHTML= childData2['apositive'];
+      document.getElementById("bpos3").innerHTML= childData2['bpositive'];
+      document.getElementById("aneg3").innerHTML= childData2['anegative'];
+      document.getElementById("bneg3").innerHTML= childData2['bnegative'];
+      document.getElementById("name3").innerHTML= childData2['Bank'];
+
+          })
+        })
+      }
+</script>
+
+</body>
+</html>
